@@ -138,7 +138,8 @@ class ReactionRuleEditForm extends RulesComponentFormBase {
   /**
    * Checks if the event of the current rule is registered into the container.
    *
-   * @return true | false
+   * @return bool
+   *   TRUE if the event is registered, FALSE otherwise.
    */
   protected function isRuleEventRegistered() {
     // To check if the event of the rule is registered, we have to check if the
