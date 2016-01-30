@@ -149,16 +149,15 @@ class ReactionRuleEditForm extends RulesComponentFormBase {
     // event subscriber which is registered for that event.
     $event_name = $this->getRuleConfig()->getEvent();
     $listeners = $this->eventDispatcher->getListeners();
-    $event_is_registered  = FALSE;
     if (!empty($listeners[$event_name])) {
       $generic_subscriber_class = get_class($this->genericEventSubscriber);
       foreach ($listeners[$event_name] as $listener) {
         if (is_object($listener[0]) && get_class($listener[0]) == $generic_subscriber_class) {
-          $event_is_registered = TRUE;
+          return TRUE;
         }
       }
     }
-    return $event_is_registered;
+    return FALSE;
   }
 
 }
