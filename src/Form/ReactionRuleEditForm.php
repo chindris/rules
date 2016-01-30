@@ -55,11 +55,11 @@ class ReactionRuleEditForm extends RulesComponentFormBase {
    * @param \Drupal\rules\Engine\RulesEventManager $event_manager
    *   The event plugin manager.
    */
-  public function __construct(RulesEventManager $event_manager, EventDispatcherInterface $eventDispatcher, EventSubscriberInterface $genericEventSubscriber, DrupalKernelInterface $drupalKernel) {
+  public function __construct(RulesEventManager $event_manager, EventDispatcherInterface $event_dispatcher, EventSubscriberInterface $generic_event_subscriber, DrupalKernelInterface $drupal_kernel) {
     $this->eventManager = $event_manager;
-    $this->eventDispatcher = $eventDispatcher;
-    $this->genericEventSubscriber = $genericEventSubscriber;
-    $this->drupalKernel = $drupalKernel;
+    $this->eventDispatcher = $event_dispatcher;
+    $this->genericEventSubscriber = $generic_event_subscriber;
+    $this->drupalKernel = $drupal_kernel;
   }
 
   /**
